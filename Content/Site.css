@@ -4,10 +4,53 @@ body {
     border: 0px;
 }
 
+.inProgress {
+    text-align: center;
+    padding: 10px 0;
+}
+
 .hide {
     display: none;
 }
 
 .show {
     display: block;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.title {
+    font-size: 24px;
+    font-weight:bold;
+    padding: 15px 0;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.navbar {
+    font-size: 18px;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.option {
+    padding: 0 30px;
+    display: inline-block;
+}
+
+.selected {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/*homepage*/
+#welcome {
+    text-align: center;
+    padding: 10px 0;
 }
