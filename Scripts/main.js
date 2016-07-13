@@ -130,10 +130,14 @@ var Main = (function () {
         var currentYear = new Date().getFullYear();
         homePageHTML = homePageHTML.replace("{currentYear}", currentYear);
         homePage.innerHTML = homePageHTML;
-
-        // site loaded - callback
-        _homeLoaded = true;
-        loadedCallback();
+        var bannerImg = new Image();
+        bannerImg.src = "Content/capitol.jpg";
+        bannerImg.onload = function () {
+            homePage.style.background = 'url(' + bannerImg.src + ')' + " no-repeat center center fixed";
+            homePage.style.backgroundSize = "cover";
+            _homeLoaded = true;
+            loadedCallback();
+        };
     }
     function _loadInfoHTML(loadedCallback) {
         _infoLoaded = true;

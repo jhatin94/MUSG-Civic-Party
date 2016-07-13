@@ -55,15 +55,6 @@ body {
 }
 
 /*homepage*/
-.banner {
-    background: url(capitol.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-}
-
 #welcome {
     text-align: center;
     padding: 10px 0;
