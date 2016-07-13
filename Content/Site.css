@@ -1,7 +1,12 @@
+html {
+    height: 100%;
+}
+
 body {
     margin: 0px;
     padding: 0px;
     border: 0px;
+    height: 100%;
 }
 
 .inProgress {
@@ -27,7 +32,7 @@ body {
 
 .title {
     font-size: 24px;
-    font-weight:bold;
+    font-weight: bold;
     padding: 15px 0;
     text-decoration: underline;
     text-align: center;
@@ -50,7 +55,20 @@ body {
 }
 
 /*homepage*/
+.banner {
+    background: url(capitol.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
 #welcome {
     text-align: center;
     padding: 10px 0;
+}
+
+#homePageContainer {
+    height: 100%;
 }

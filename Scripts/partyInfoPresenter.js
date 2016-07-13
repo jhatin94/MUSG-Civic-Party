@@ -11,6 +11,7 @@ var PartyInfoPresenter = (function () {
     /*public functions*/
     function renderPage() {
         if (!_isPageSetup) {
+            _isPageSetup = true;
             // set up any necessary events
 
         }

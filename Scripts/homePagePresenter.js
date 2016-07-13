@@ -11,19 +11,20 @@ var HomePagePresenter = (function () {
     /*public functions*/
     function renderPage() {
         if (!_isPageSetup) {
+            _isPageSetup = true;
             // set up any necessary events
-            Main.addClickEventToElement(document.getElementById("homeOpt"), function () {
-                Main.changeHash(Main.pageHashes.home);
-            });
-            Main.addClickEventToElement(document.getElementById("infoOpt"), function () {
-                Main.changeHash(Main.pageHashes.info);
-            });
-            Main.addClickEventToElement(document.getElementById("platformOpt"), function () {
-                Main.changeHash(Main.pageHashes.platform);
-            });
-            Main.addClickEventToElement(document.getElementById("quizOpt"), function () {
-                Main.changeHash(Main.pageHashes.quiz);
-            });
+            //Main.addClickEventToElement(document.getElementById("homeOpt"), function () {
+            //    Main.changeHash(Main.pageHashes.home);
+            //});
+            //Main.addClickEventToElement(document.getElementById("infoOpt"), function () {
+            //    Main.changeHash(Main.pageHashes.info);
+            //});
+            //Main.addClickEventToElement(document.getElementById("platformOpt"), function () {
+            //    Main.changeHash(Main.pageHashes.platform);
+            //});
+            //Main.addClickEventToElement(document.getElementById("quizOpt"), function () {
+            //    Main.changeHash(Main.pageHashes.quiz);
+            //});
         }
         Main.showPage(Main.pageContainers.homePageContainer);
     }
