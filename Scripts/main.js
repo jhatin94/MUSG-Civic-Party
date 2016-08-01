@@ -28,6 +28,7 @@ var Main = (function () {
     var _platformLoaded = false;
     var _quizLoaded = false;
     var _containers = ["homePageContainer", "partyInfoContainer", "partyPlatformContainer", "alignmentQuizContainer"];
+    var _currentYear;
     /*end private properties*/
 
     /*public functions*/
@@ -127,8 +128,8 @@ var Main = (function () {
         // do html modifications
         var homePage = document.getElementById(Main.pageContainers.homePageContainer);
         var homePageHTML = homePage.innerHTML;
-        var currentYear = new Date().getFullYear();
-        homePageHTML = homePageHTML.replace("{currentYear}", currentYear);
+        _currentYear = new Date().getFullYear();
+        homePageHTML = homePageHTML.replace("{currentYear}", _currentYear);
         homePage.innerHTML = homePageHTML;
         var bannerImg = new Image();
         bannerImg.src = "Content/capitol.jpg";

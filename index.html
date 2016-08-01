@@ -12,27 +12,72 @@
 </head>
 <body>
     <div id="homePageContainer" class="hide">
-        <div class="title">Model Civic Party</div>
-        <!--<div class="navbar">
-            <div id="homeOpt" class="option selected">Home</div>
-            <div id="infoOpt" class="option">Info</div>
-            <div id="platformOpt" class="option">Platform</div>
-            <div id="quizOpt" class="option">Quiz</div>
-        </div>-->
-        <div id="welcome">This is the foundation for a great Party Website. Stay tuned for updates!</div>
+        <div id="homeHeader" class="header">
+            <div class="title">Model Civic Party</div>
+            <div id="welcome">Welcome to the Home Page for the Model Civic Party of /r/ModelUSGov!</div>
+        </div>
+        <div id="blurb">We're a moderate Party with no strict ties to any particular ideology. Use the tiles below to navigate the site!</div>
+        <div id="info">
+            <div id="infoRow1" class="infoRow">
+                <div id="infoSquare" class="linkSquare pullLeft"><!--Some Image About Info -- Add a hover state to this class--><div class="overlay">Party Information</div></div>
+                <div id="platSquare" class="linkSquare pullRight"><!--Some Image About Info -- Add a hover state to this class--><div class="overlay">Check Out Our Platform!</div></div>
+            </div> 
+            <div id="infoRow2" class="infoRow">
+                <div id="quizSquare" class="linkSquare pullLeft"><!--Some Image About Info -- Add a hover state to this class--><div class="overlay">See How Much You Align With Us!</div></div>
+                <div id="joinSquare" class="linkSquare pullRight"><!--Some Image About Info -- Add a hover state to this class https://www.reddit.com/r/ModelUSGov/comments/479svq/join_a_party/ --><div class="overlay">Join Us!</div></div>
+            </div>
+        </div>
         <footer class="footer">&copy; {currentYear} - Model Civic Party</footer>
     </div>
     <div id="partyInfoContainer" class="hide">
         <div class="title">Party Info Page</div>
-        <div class="inProgress">Coming Soon!</div>
+        <div class="navbar"> <!--move this navbar either vertical on right side or in upper-right corner-->
+            <div id="homeOpt" class="option">Home</div>
+            <div id="platformOpt" class="option">Platform</div>
+            <div id="quizOpt" class="option">How Do You Align?</div>
+        </div>
+        <div id="about">
+            <div class="header">Who Are We?</div>
+            <div id="history">We are a Party made up of members across the political spectrum that generally oppose authoritarianism and support individual and State rights. The Party was founded upon a common distaste of all the current political parties in ModelUSGov. 
+            Check out our <a href="https://www.reddit.com/r/ModelUSGov/wiki/civic">Reddit Wiki Page</a> for more info.</div>
+            <div class="header">Our Leadership Team</div>
+            <div id="leadership">
+                <p>
+                    The Party is led by the National Civic Committee, which is made up of the Chairman, 2 Deputy Chairmen, the Head Recruiter, and the Chair of the Platform Maintainence Committee.
+                    The NCC keeps up with Party functions such as primary, replacement, and party elections. Additionally, the NCC implements the electoral strategy of the Party.
+                </p>
+                <p>                    
+                    The Platform Maintenance Committee (PMC) is the body which writes all policy for the party platform. The members are elected every three months, and are led by the PMC Chairman. If you have any ideas for policy, please PM the Chairman /u/bomalia.
+                </p>
+                <p>
+                    The Recruitment Committee is the main body in charge of increasing party membership and reaching out to potential new members. The Chief Recruiter is appointed by the Chairman, and has the authority to appoint up to four Junior Recruiters to fill out the committee.
+                    It is also in charge of advertising and public relations for the party, and looks for appropriate subreddits to reach out to as a result. The committee is headed by Chief Recruiter /u/Vakiadia.
+                </p>
+            </div>
+            <div class="header">Our Media Outlets</div>
+            <div id="media">Members of the Party are in control of two media outlets on /r/ModelUSPress. These are <a href="https://www.reddit.com/r/MCNN">MCNN</a>, a Model CNN outlet with a variety of articles and <a href="https://www.reddit.com/r/rationalemagazine">Rationale Magazine</a>, a paper that reports mainly on affairs that affect the Party.</div>
+        </div>
+        <footer class="footer">&copy; {currentYear} - Model Civic Party</footer>
     </div>
     <div id="partyPlatformContainer" class="hide">
         <div class="title">Party Platform Page</div>
-        <div class="inProgress">Coming Soon!</div>
+        <div class="navbar"> <!--move this navbar either vertical on right side or in upper-right corner-->
+            <div id="homeOpt" class="option">Home</div>
+            <div id="infoOpt" class="option">Info</div>
+            <div id="quizOpt" class="option">How Do You Align?</div>
+        </div>
+        <div id="platform">Coming Soon!</div><!--Have this be an accordion for each platform section-->
+        <footer class="footer">&copy; {currentYear} - Model Civic Party</footer>
     </div>
     <div id="alignmentQuizContainer" class="hide">
         <div class="title">Party Alignment Quiz Page</div>
-        <div class="inProgress">Coming Soon!</div>
+        <div class="navbar"> <!--move this navbar either vertical on right side or in upper-right corner-->
+            <div id="homeOpt" class="option">Home</div>
+            <div id="infoOpt" class="option">Info</div>
+            <div id="platformOpt" class="option">Platform</div>
+        </div>
+        <div id="quiz">Coming Soon!</div> <!--Radio buttons horizontal on all questions each would have a numerical value, calculate button totals up values and averages them for percentage of alignment, based on score give recommendation about joining, show join link, etc.-->
+        <footer class="footer">&copy; {currentYear} - Model Civic Party</footer>
     </div>
 </body>
 </html>
