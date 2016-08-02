@@ -10,6 +10,11 @@ body {
     height: 100%;
 }
 
+.container {
+    min-height: 100%;
+    position: relative;
+}
+
 a {
     text-decoration: none;
     color: #6B6FBC;
@@ -42,6 +47,10 @@ a {
     padding: 15px 0;
     background-color: #6B6FBC;
     color: #fff;
+}
+
+.push {
+    height: 51px;
 }
 
 .title {
