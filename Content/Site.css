@@ -167,3 +167,10 @@ a {
 
 
 /*quiz page*/
+
+/*media queries*/
+@media all and (max-height: 723px) {
+    .overlay {
+        padding: 50px 0;
+    }
+}
