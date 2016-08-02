@@ -5,16 +5,22 @@ var AlignmentQuizPresenter = (function () {
     /*end public properties*/
 
     /*private properties*/
-    var _isPageSetup = false;
     /*end private properties*/
 
     /*public functions*/
     function renderPage() {
-        if (!_isPageSetup) {
-            _isPageSetup = true;
-            // set up any necessary events
+        // set up any necessary events
+        Main.addClickEventToElement(document.getElementById("homeOptQ"), function () {
+            Main.changeHash(Main.pageHashes.home);
+        });
+        Main.addClickEventToElement(document.getElementById("infoOptQ"), function () {
+            Main.changeHash(Main.pageHashes.info);
+        });
+        Main.addClickEventToElement(document.getElementById("platformOptQ"), function () {
+            Main.changeHash(Main.pageHashes.platform);
+        });
 
-        }
+        // show page
         Main.showPage(Main.pageContainers.alignmentQuizContainer);
     }
     /*end public functions*/

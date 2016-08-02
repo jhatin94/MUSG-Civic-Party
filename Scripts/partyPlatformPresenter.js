@@ -5,16 +5,22 @@ var PartyPlatformPresenter = (function () {
     /*end public properties*/
 
     /*private properties*/
-    var _isPageSetup = false;
     /*end private properties*/
 
     /*public functions*/
     function renderPage() {
-        if (!_isPageSetup) {
-            _isPageSetup = true;
-            // set up any necessary events
+        // set up any necessary events
+        Main.addClickEventToElement(document.getElementById("homeOptP"), function () {
+            Main.changeHash(Main.pageHashes.home);
+        });
+        Main.addClickEventToElement(document.getElementById("infoOptP"), function () {
+            Main.changeHash(Main.pageHashes.info);
+        });
+        Main.addClickEventToElement(document.getElementById("quizOptP"), function () {
+            Main.changeHash(Main.pageHashes.quiz);
+        });
 
-        }
+        // show page
         Main.showPage(Main.pageContainers.partyPlatformContainer);
     }
     /*end public functions*/
