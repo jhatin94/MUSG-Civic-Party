@@ -141,14 +141,26 @@ var Main = (function () {
         };
     }
     function _loadInfoHTML(loadedCallback) {
+        var infoPage = document.getElementById(Main.pageContainers.partyInfoContainer);
+        var infoPageHTML = infoPage.innerHTML;
+        infoPageHTML = infoPageHTML.replace("{currentYear}", _currentYear);
+        infoPage.innerHTML = infoPageHTML;
         _infoLoaded = true;
         loadedCallback();
     }
     function _loadPlatformHTML(loadedCallback) {
+        var platformPage = document.getElementById(Main.pageContainers.partyPlatformContainer);
+        var platformPageHTML = platformPage.innerHTML;
+        platformPageHTML = platformPageHTML.replace("{currentYear}", _currentYear);
+        platformPage.innerHTML = platformPageHTML;
         _platformLoaded = true;
         loadedCallback();
     }
     function _loadQuizHTML(loadedCallback) {
+        var quizPage = document.getElementById(Main.pageContainers.alignmentQuizContainer);
+        var quizPageHTML = quizPage.innerHTML;
+        quizPageHTML = quizPageHTML.replace("{currentYear}", _currentYear);
+        quizPage.innerHTML = quizPageHTML;
         _quizLoaded = true;
         loadedCallback();
     }
