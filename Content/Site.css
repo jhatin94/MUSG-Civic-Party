@@ -164,13 +164,58 @@ a {
 }
 
 /*platform page*/
+#platform {
+    overflow: hidden;
+}
 
+#sectionSelector {
+    float: left;
+    background-color: #4549a1;
+    color: #fff;
+    display: inline-block;
+    margin: 4% 0 4%;
+    padding: 75px 0;
+}
+
+#sectionDisplay {
+    background-color: #4549a1;
+    color: #fff;
+    display: inline-block;
+    padding: 25px 25px;
+    margin: 4% 1% 4% 10%;
+    width: 50%;
+}
+
+.platSecOpt {
+    padding: 25px 30px;
+}
+
+    .platSecOpt:hover {
+        background-color: #6B6FBC;
+    }
+
+.platSecTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.platSecText {
+    padding: 12px 10px;
+}
 
 /*quiz page*/
 
 /*media queries*/
-@media all and (max-height: 723px) {
+@media all and (max-height: 723px) { /*short resolutions*/
     .overlay {
         padding: 50px 0;
     }
+}
+
+@media all and (max-width: 756px) { /*small resolutions*/
+
+}
+
+@media all and (max-width: 380px) { /*mobile resolution*/
+
 }

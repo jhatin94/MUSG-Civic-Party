@@ -153,8 +153,14 @@ var Main = (function () {
         var platformPageHTML = platformPage.innerHTML;
         platformPageHTML = platformPageHTML.replace("{currentYear}", _currentYear);
         platformPage.innerHTML = platformPageHTML;
-        _platformLoaded = true;
-        loadedCallback();
+        var platBgImg = new Image();
+        platBgImg.src = "Content/capitalRear.jpg";
+        platBgImg.onload = function () {
+            platformPage.style.background = 'url(' + platBgImg.src + ')' + " no-repeat center center fixed";
+            platformPage.style.backgroundSize = "cover";
+            _platformLoaded = true;
+            loadedCallback();
+        }
     }
     function _loadQuizHTML(loadedCallback) {
         var quizPage = document.getElementById(Main.pageContainers.alignmentQuizContainer);
