@@ -32,7 +32,7 @@ a {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 .show {
@@ -204,6 +204,66 @@ a {
 }
 
 /*quiz page*/
+#quizInstructions {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#questions {
+    background-color: #4549a1;
+    color: #fff;
+    margin: 20px 10%;
+}
+
+.question {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #272727;
+}
+
+.qText {
+    padding: 0 20px 20px;
+}
+
+#submitAnswers {
+    display: inline-block;
+    text-align: right;
+    width: 50%;
+}
+
+#submitBtn {
+    background-color: #6B6FBC;
+    display: inline-block;
+    color: #fff;
+    padding: 20px 75px;
+}
+
+#quizResult {
+    display: inline-block;
+    text-align: left;
+    width: 45%;
+    float: right;
+    line-height: 160%;
+}
+
+.quizScore { 
+    display: inline-block;
+}
+
+#quizEndContainer {
+    margin: 30px 0 4%;
+    overflow: hidden;
+}
+
+#totalScore {
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+#joinPartyLinkRec {
+    display: block;
+}
 
 /*media queries*/
 @media all and (max-height: 723px) { /*short resolutions*/
