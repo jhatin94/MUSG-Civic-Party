@@ -238,6 +238,10 @@ a {
     padding: 20px 75px;
 }
 
+    #submitBtn:hover {
+        background-color: #4549a1;
+    }
+
 #quizResult {
     display: inline-block;
     text-align: left;
@@ -246,7 +250,7 @@ a {
     line-height: 160%;
 }
 
-.quizScore { 
+.quizScore {
     display: inline-block;
 }
 
@@ -263,6 +267,12 @@ a {
 
 #joinPartyLinkRec {
     display: block;
+}
+
+#notFinishedWarning {
+    color: #b20000;
+    margin-left: 25px;
+    display: inline-block;
 }
 
 /*media queries*/
