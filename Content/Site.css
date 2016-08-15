@@ -277,13 +277,160 @@ a {
 
 /*media queries*/
 @media all and (max-height: 723px) { /*short resolutions*/
+    /*homepage*/
     .overlay {
         padding: 50px 0;
     }
 }
 
-@media all and (max-width: 756px) { /*small resolutions*/
+@media all and (max-height: 605px) { /*short resolutions*/
+    /*homepage*/
+    .header {
+        padding: 0;
+    }
 
+    #blurb {
+        padding: 15px 0 0;
+    }
+
+    .infoRow {
+        margin: 0;
+    }
+
+    .linkSquare {
+        display: block;
+        width: auto;
+        margin: 0 200px;
+        float: none !important;
+    }
+
+    .overlay {
+        padding: 15px 0;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+}
+
+@media all and (max-width: 968px) { /*small resolutions*/
+    /*homepage*/
+    .header {
+        padding: 0;
+    }
+
+    #blurb {
+        width: 60%;
+        margin: auto;
+        padding: 15px 0 0;
+    }
+
+    .infoRow {
+        margin: 0;
+    }
+
+    .linkSquare {
+        display: block;
+        width: auto;
+        margin: 0 25%;
+        float: none !important;
+    }
+
+    .overlay {
+        padding: 15px 0;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+
+    /*platform*/
+    #sectionSelector {
+        padding: 10px 0;
+    }
+
+    #sectionDisplay {
+        text-align: center;
+        padding: 20px 5px;
+    }
+
+    /*quiz*/
+    #quizInstructions {
+        width: 70%;
+        margin: auto;
+        padding: 15px 0 0;
+    }
+}
+
+@media all and (max-width: 720px) {
+    /*platform*/
+    #sectionSelector {
+        padding: 0;
+        float: none !important;
+        margin: auto;
+        margin-bottom: 3%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .platSecOpt {
+        padding: 18px 17px;
+        display: inline-block !important;
+    }
+
+    #sectionDisplay {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 3%;
+    }
+}
+
+@media all and (max-width: 654px) {
+    /*platform*/
+    .title {
+        font-size: 20px;
+        padding: 15px 0 0;
+    }
+
+    .navbar {
+        font-size: 14px;
+    }
+
+    .option {
+        padding: 10px 10px;
+    }
+
+    #sectionSelector {
+        font-size: 14px;
+    }
+
+    .platSecOpt {
+        display: block !important;
+        padding: 3px 0;
+    }
+
+    #sectionDisplay {
+        font-size: 14px;
+    }
+
+    /*homepage*/
+    #blurb, #welcome, .overlay {
+        font-size: 14px;
+    }
+
+    .linkSquare {
+        margin: 0 10%;
+    }
+
+    /*info*/
+    .smallHeader {
+        font-size: 17px;
+        padding: 13px 30px;
+    }
+
+    .infoText {
+        font-size: 14px;
+    }
 }
 
 @media all and (max-width: 380px) { /*mobile resolution*/
