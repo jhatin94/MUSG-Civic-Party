@@ -29,6 +29,7 @@ var Main = (function () {
     var _quizLoaded = false;
     var _containers = ["homePageContainer", "partyInfoContainer", "partyPlatformContainer", "alignmentQuizContainer"];
     var _currentYear;
+    var _shouldLoadImages = true;
     /*end private properties*/
 
     /*public functions*/
@@ -104,6 +105,7 @@ var Main = (function () {
     }
     function _loadHTML(callback) {
         if (!_isSiteLoaded()) {
+            _shouldLoadImages = window.screen.width > 654;
             _loadHomeHTML(function () {
                 if (_isSiteLoaded()) {
                     callback();
@@ -137,14 +139,20 @@ var Main = (function () {
             _currentYear = new Date().getFullYear();
             homePageHTML = homePageHTML.replace("{currentYear}", _currentYear);
             homePage.innerHTML = homePageHTML;
-            var bannerImg = new Image();
-            bannerImg.src = "Content/capitol.jpg";
-            bannerImg.onload = function () {
-                homePage.style.background = 'url(' + bannerImg.src + ')' + " no-repeat center center fixed";
-                homePage.style.backgroundSize = "cover";
+            if (_shouldLoadImages) {
+                var bannerImg = new Image();
+                bannerImg.src = "Content/capitol.jpg";
+                bannerImg.onload = function () {
+                    homePage.style.background = 'url(' + bannerImg.src + ')' + " no-repeat center center fixed";
+                    homePage.style.backgroundSize = "cover";
+                    _homeLoaded = true;
+                    loadedCallback();
+                };
+            }
+            else {
                 _homeLoaded = true;
                 loadedCallback();
-            };
+            }
         }
     }
     function _loadInfoHTML(loadedCallback) {
@@ -163,11 +171,17 @@ var Main = (function () {
             var platformPageHTML = platformPage.innerHTML;
             platformPageHTML = platformPageHTML.replace("{currentYear}", _currentYear);
             platformPage.innerHTML = platformPageHTML;
-            var platBgImg = new Image();
-            platBgImg.src = "Content/capitalRear.jpg";
-            platBgImg.onload = function () {
-                platformPage.style.background = 'url(' + platBgImg.src + ')' + " no-repeat center center fixed";
-                platformPage.style.backgroundSize = "cover";
+            if (_shouldLoadImages) {
+                var platBgImg = new Image();
+                platBgImg.src = "Content/capitalRear.jpg";
+                platBgImg.onload = function () {
+                    platformPage.style.background = 'url(' + platBgImg.src + ')' + " no-repeat center center fixed";
+                    platformPage.style.backgroundSize = "cover";
+                    _platformLoaded = true;
+                    loadedCallback();
+                }
+            }
+            else {
                 _platformLoaded = true;
                 loadedCallback();
             }
