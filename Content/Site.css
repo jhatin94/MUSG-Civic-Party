@@ -281,16 +281,18 @@ a {
     .overlay {
         padding: 50px 0;
     }
+
+    #blurb {
+        margin: 10px auto !important;
+        padding: 3px !important;
+        background-color: #4549a1;
+    }
 }
 
 @media all and (max-height: 605px) { /*short resolutions*/
     /*homepage*/
     .header {
         padding: 0;
-    }
-
-    #blurb {
-        padding: 15px 0 0;
     }
 
     .infoRow {
@@ -409,6 +411,10 @@ a {
         padding: 3px 0;
     }
 
+    .platSecTitle {
+        font-size: 17px;
+    }
+
     #sectionDisplay {
         font-size: 14px;
     }
@@ -433,6 +439,13 @@ a {
     }
 }
 
-@media all and (max-width: 380px) { /*mobile resolution*/
+@media all and (max-width: 349px) { /*mobile resolution*/
+    /*info page*/
+    .option {
+        padding: 10px 5px;
+    }
 
+    .infoText {
+        padding: 20px 35px;
+    }
 }
