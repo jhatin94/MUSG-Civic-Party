@@ -107,6 +107,10 @@ a {
     padding-bottom: 0;
 }
 
+.altBackground {
+    background-color: #efeff4;
+}
+
 /*homepage*/
 #welcome {
     text-align: center;
@@ -221,6 +225,10 @@ a {
     border: 1px solid #272727;
 }
 
+.quizQuestion {
+    display: inline-block;
+}
+
 .qText {
     padding: 0 20px 20px;
 }
@@ -228,7 +236,7 @@ a {
 #submitAnswers {
     display: inline-block;
     text-align: right;
-    width: 50%;
+    width: 49%;
 }
 
 #submitBtn {
@@ -385,6 +393,24 @@ a {
         margin: auto;
         margin-bottom: 3%;
     }
+
+    /*quiz page*/
+    #submitAnswers {
+        font-size: 14px;
+        width: 47%;
+    }
+
+    #submitBtn {
+        padding: 20px 60px;
+    }
+
+    #notFinishedWarning, #quizResult {
+        font-size: 14px;
+    }
+
+    #totalScore {
+        font-size: 16px;
+    }
 }
 
 @media all and (max-width: 654px) {
@@ -438,6 +464,38 @@ a {
         font-size: 14px;
         padding: 20px 50px;
     }
+
+    /*quiz page*/
+    #notFinishedWarning {
+        width: 44%;
+        margin-left: 13px;
+    }
+}
+
+@media all and (max-width: 472px) {
+    /*quiz page*/
+    .quizQuestion {
+        text-align: left;
+        margin-left: 30px;
+        display: block;
+    }
+
+    #notFinishedWarning {
+        width: 40%;
+        margin-left: 18px;
+    }
+
+    #submitBtn {
+        padding: 15px 40px;
+    }
+
+    #submitAnswers {
+        width: 44%;
+    }
+
+    #quizResult {
+        width: 48%;
+    }
 }
 
 @media all and (max-width: 349px) { /*mobile resolution*/
@@ -448,5 +506,14 @@ a {
 
     .infoText {
         padding: 20px 35px;
+    }
+
+    /*quiz page*/
+    #submitBtn {
+        padding: 15px 30px;
+    }
+
+    #quizResult {
+        width: 51%;
     }
 }

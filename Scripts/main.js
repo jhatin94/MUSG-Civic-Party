@@ -150,6 +150,7 @@ var Main = (function () {
                 };
             }
             else {
+                homePage.classList.add("altBackground");
                 _homeLoaded = true;
                 loadedCallback();
             }
@@ -182,6 +183,7 @@ var Main = (function () {
                 }
             }
             else {
+                platformPage.classList.add("altBackground");
                 _platformLoaded = true;
                 loadedCallback();
             }
