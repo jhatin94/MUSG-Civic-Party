@@ -21,6 +21,7 @@ var PartyInfoPresenter = (function () {
         });
 
         // show page
+        Main.sendPageview(Main.analyticPageTitles.info);
         Main.showPage(Main.pageContainers.partyInfoContainer);
     }
     /*end public functions*/

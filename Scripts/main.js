@@ -20,6 +20,12 @@ var Main = (function () {
         platform: "Party Platform",
         quiz: "Alignment Quiz"
     }
+    var analyticPageTitles = {
+        home: "Home Page",
+        info: "Party Info Page",
+        platform: "Party Platform Page",
+        quiz: "Alignment Quiz Page"
+    }
     /*end public properties*/
 
     /*private properties*/
@@ -91,6 +97,21 @@ var Main = (function () {
         if (window.location.hash != hash) {
             window.location.hash = hash;
         }
+    }
+    function sendAnalyticsEvent(category, action, label, value) {
+        if (value) {
+            ga('send', 'event', category, action, label, value);
+        }
+        else {
+            ga('send', 'event', category, action, label);
+        }
+    }
+    function sendPageview(page) {
+        ga('set', {
+            page: page,
+            title: page
+        });
+        ga('send', 'pageview', page);
     }
     /*end public functions*/
 
@@ -209,10 +230,13 @@ var Main = (function () {
         pageHashes: pageHashes,
         pageContainers: pageContainers,
         pageTitles: pageTitles,
+        analyticPageTitles: analyticPageTitles,
         showPage: showPage,
         hidePage: hidePage,
         changeHash: changeHash,
         addClickEventToElement: addClickEventToElement,
+        sendAnalyticsEvent: sendAnalyticsEvent,
+        sendPageview: sendPageview,
         renderPage: renderPage
     }
 })();

@@ -33,15 +33,18 @@ var AlignmentQuizPresenter = (function () {
             Main.changeHash(Main.pageHashes.platform);
         });
         Main.addClickEventToElement(document.getElementById("submitBtn"), function () {
+            Main.sendAnalyticsEvent("UX", "click", "Submit Quiz");
             if (_areAllQuestionsAnswered()) {
                 _calculateResults();
             }
             else {
+                Main.sendAnalyticsEvent("UX", "Quiz Result", "Quiz Incomplete");
                 _showHideNotFinishedWarning(true);
             }
         });
 
         // show page
+        Main.sendPageview(Main.analyticPageTitles.quiz);
         Main.showPage(Main.pageContainers.alignmentQuizContainer);
     }
     /*end public functions*/
@@ -91,6 +94,7 @@ var AlignmentQuizPresenter = (function () {
         _domScore = parseFloat((_domScore / _domQuestions).toFixed(2));
         _fpScore = parseFloat((_fpScore / _fpQuestions).toFixed(2));
         _totalScore = parseFloat(((_econScore + _domScore + _fpScore) / 3).toFixed(2));
+        Main.sendAnalyticsEvent("UX", "Quiz Result", "Score: " + _totalScore + "%");
         _displayResults();
     }
     function _displayResults() {

@@ -26,19 +26,24 @@ var PartyPlatformPresenter = (function () {
             Main.changeHash(Main.pageHashes.quiz);
         });
         Main.addClickEventToElement(document.getElementById("econ"), function () {
+            Main.sendAnalyticsEvent("UX", "click", "Economy");
             _loadPlatformSection(_platformSections.economy);
         });
         Main.addClickEventToElement(document.getElementById("immigration"), function () {
+            Main.sendAnalyticsEvent("UX", "click", "Immigration");
             _loadPlatformSection(_platformSections.immigration);
         });
         Main.addClickEventToElement(document.getElementById("domSoc"), function () {
+            Main.sendAnalyticsEvent("UX", "click", "Domestic Policy");
             _loadPlatformSection(_platformSections.domestic);
         });
         Main.addClickEventToElement(document.getElementById("foreignPol"), function () {
+            Main.sendAnalyticsEvent("UX", "click", "Foreign Policy");
             _loadPlatformSection(_platformSections.foreign);
         });
 
         // show page
+        Main.sendPageview(Main.analyticPageTitles.platform);
         Main.showPage(Main.pageContainers.partyPlatformContainer);
     }
     /*end public functions*/
